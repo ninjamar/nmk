@@ -2,5 +2,4 @@
 ninjamar's kernel
 
 ## running
-
-run `make`
+to run do `bash run.sh`
