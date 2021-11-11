@@ -2,9 +2,10 @@
 
 int kmain(){
   kclear();
-  char *msg = "Hello, World!\n";
-  kprint(msg);
-
+  char *msga = "Hello, World!\n";
+  char *msgb = "Foobar"
+  kprint(msga);
+  krprint(msgb);
   
   return 0;
 }
