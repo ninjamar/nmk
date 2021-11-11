@@ -1,3 +1,8 @@
+/*
+  This is the file that controls the display.
+  Made by ninjamar (https://github.com/ninjamar)
+*/
+
 #define VGA_ADDRESS 0xb8000
 
 char *video = (char *)VGA_ADDRESS;
