@@ -12,9 +12,6 @@ int kprint(char *msg){
   while (msg[j] != '\0'){
     video[i] = msg[j];
     video[i+1] = 0x07;
-    if (msg[j] == '\n'){
-      j = j + 79;
-    }
     ++j;
     i = i + 2;
   }
