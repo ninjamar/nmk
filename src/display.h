@@ -26,7 +26,7 @@ int kclear(){
   int j = 0;
   // 25 lines of 80 characters which take 2 bytes
   while (j < 80*25*2){
-    video[j] = ' ';
+    video[j] = 'a';
     video[j+1] = 0x07;
     j = j + 2;
   }
