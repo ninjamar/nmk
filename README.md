@@ -1,6 +1,6 @@
 # NMK
 ninjamar's kernel <br>
-[Demo](https://replit.com/@ninjamar/nwk)
+[Demo](https://replit.com/@ninjamar/gh-nwk)
 ## Running
 
 ### Downloading
