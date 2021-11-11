@@ -3,9 +3,9 @@
 int kmain(){
   kclear();
   char *msga = "Hello, World!\n";
-  char *msgb = "Foobar"
+  char *msgb = "Foobar";
   kprint(msga);
-  krprint(msgb);
+  kprint(msgb);
   
   return 0;
 }
