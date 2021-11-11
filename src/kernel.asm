@@ -1,7 +1,7 @@
 ;; the start of the kernel
 ;; main is kernel.c
 ;; taken from https://github.com/chipsetx/Simple-Kernel-in-C-and-Assembly/blob/master/kernel.asm
-	
+
 bits 32; 32 bit mode
 
 section .text
