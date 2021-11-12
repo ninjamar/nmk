@@ -1,4 +1,6 @@
 # NMK
+NEW RELEASE COMING SOON! 
+
 ninjamar's kernel <br>
 [Demo](https://replit.com/@ninjamar/gh-nwk)
 ## Running
