@@ -11,9 +11,8 @@ int kmain(){
   kclear();
   
   char *m1 = "Hello! This is ninjamar's kernel (nmk)";
-  char *m2 = "https://github.com/ninjamar/nmk"
-
+  char *m2 = "https://github.com/ninjamar/nmk";
   kprint(m1);
-	kprint(m2);
+  kprint(m2);
   return 0;
 }
