@@ -9,8 +9,11 @@
 
 int kmain(){
   kclear();
-  char *msga = "Hello, World!\n";
-  kprint(msga);
   
+  char *m1 = "Hello! This is ninjamar's kernel (nmk)";
+  char *m2 = "https://github.com/ninjamar/nmk"
+
+  kprint(m1);
+	kprint(m2);
   return 0;
 }
