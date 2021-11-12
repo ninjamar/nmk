@@ -5,7 +5,7 @@ ninjamar's kernel <br>
 ### From the releases page
 Download the latest kernel release from the download page.
 ```bash
-wget https://github.com/ninjamar/nmk/releases/download/v0.0.1/kernel-vX.Y.Z
+wget https://github.com/ninjamar/nmk/releases/download/vX.Y.Z/kernel-vX.Y.Z
 qemu-system-i386 -kernel kernel-vX.Y.Z
 ```
 
