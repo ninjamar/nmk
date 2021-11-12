@@ -2,14 +2,7 @@
 ninjamar's kernel <br>
 [Demo](https://replit.com/@ninjamar/gh-nmk)
 ## Running the kernel
-### From the releases page
-Download the latest kernel release from the download page.
-```bash
-wget https://github.com/ninjamar/nmk/releases/download/vX.Y.Z/nmk-vX.Y.Z
-qemu-system-i386 -kernel nmk-vX.Y.Z
-```
 
-### From source
 ```bash
 git clone https://github.com/ninjamar/nmk
 ```
