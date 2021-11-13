@@ -1,0 +1,9 @@
+
+
+# Object files
+*.o
+
+# Qemu things
+*.rom
+*.bin
+kernel
