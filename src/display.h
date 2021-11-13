@@ -20,10 +20,10 @@ int _len(char *msg){ // get length of string
 /*
  * print {msg} at {x,y}
 */
-void kprint_x_y(char *msg,int x,int y){
+void kprint_x_y(char *msg,int color,int x,int y){
 	if (_len(msg) > 80){
 		char *err_msg = "Error: Cannot print string: Size exceeds 80 characters";
-		kprint_x_y(err_msg,x,y); // print error message
+		kprint_x_y(err_msg,0x07,x,y); // print error message
 		return; // end function
 	}
 
@@ -35,7 +35,7 @@ void kprint_x_y(char *msg,int x,int y){
 	char *o_vid = (char *)VGA_ADDRESS+offset; // the new video (starts at offset)
 	while (*msg != 0){ // copy msg to o_vid
 		*o_vid++ = *msg++;
-		*o_vid++ = 0x07;
+		*o_vid++ = color;
 	}
 }
 
@@ -62,6 +62,6 @@ void kclear(){
 	implements global newline count
 */
 void kprint(char *msg){
-	kprint_x_y(msg,0,y_pos); // always print a start of line
+	kprint_x_y(msg,0x07,0,y_pos); // always print a start of line
 	y_pos = y_pos + 1; // nextline
 }
