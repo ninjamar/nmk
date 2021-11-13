@@ -3,11 +3,11 @@
   Made by ninjamar (https://github.com/ninjamar)
 */
 
-#define VGA_ADDRESS 0xb8000
+#define VGA_ADDRESS 0xb8000 // 0xb8000 is the address of the video
 
-char *video = (char *)VGA_ADDRESS;
+char *video = (char *)VGA_ADDRESS; // pointer to video
 
-int y_pos = 0; // line
+int y_pos = 0; // current line
 
 int _len(char *msg){ // get length of string
 	int i = 0;
@@ -17,8 +17,17 @@ int _len(char *msg){ // get length of string
 	return i;
 }
 
-
+/*
+ * print {msg} at {x,y}
+*/
 void kprint_x_y(char *msg,int x,int y){
+	if (_len(msg) > 80){
+		char *err_msg = "Error: Cannot print string: Size exceeds 80 characters";
+		kprint_x_y(err_msg,x,y); // print error message
+		return; // end function
+	}
+
+
 	int x_offset = (x % 2)+x; // x needs to be a multiple of 2 so we round up
 	int y_offset = ((y*80)*2 % 2)+(y*80*2); // (y*80)*2 = y = 1 = 80 * 2 = color bytes + round 
 	int offset = x_offset + y_offset;
@@ -30,6 +39,9 @@ void kprint_x_y(char *msg,int x,int y){
 	}
 }
 
+/*
+	clear the display
+*/
 void kclear(){
 	int s = 0; // string
 	int c = 1; // color
@@ -44,10 +56,12 @@ void kclear(){
 }
 
 
+
+/*
+	wrapper for kprint_x_y(msg)
+	implements global newline count
+*/
 void kprint(char *msg){
-	// do text wrap in kprint_x_y
-	// handle newline
-	// handle textwrap
 	kprint_x_y(msg,0,y_pos); // always print a start of line
 	y_pos = y_pos + 1; // nextline
 }
