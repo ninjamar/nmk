@@ -8,6 +8,7 @@
 char *video = (char *)VGA_ADDRESS; // pointer to video
 
 int y_pos = 0; // current line
+int MAX_OSIZE = 80;
 
 int _len(char *msg){ // get length of string
 	int i = 0;
@@ -21,7 +22,7 @@ int _len(char *msg){ // get length of string
  * print {msg} at {x,y}
 */
 void kprint_x_y(char *msg,int color,int x,int y){
-	if (_len(msg) > 80){
+	if (_len(msg) > MAX_OSIZE){
 		char *err_msg = "Error: Cannot print string: Size exceeds 80 characters";
 		kprint_x_y(err_msg,0x07,x,y); // print error message
 		return; // end function
