@@ -6,4 +6,6 @@
 # Qemu things
 *.rom
 *.bin
-kernel
+
+# VSCode
+.vscode
