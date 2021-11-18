@@ -1,7 +1,0 @@
-make --dry-run --always-make --keep-going --print-directory
-make: Entering directory `/Users/nathirmal787882/Desktop/coding/nmk'
-nasm -f elf32 src/kernel.asm -o kasm.o
-gcc -m32 -c src/kernel.c -o kc.o
-ld -m elf_i386 -T src/link.ld -o kernel kasm.o kc.o
-make: Leaving directory `/Users/nathirmal787882/Desktop/coding/nmk'
- 
