@@ -16,7 +16,7 @@ make
 ```bash
 make run
 ```
-If `qemu-system-i386` says it is missing some files, download the tar.gz archive of them from https://ninjamar.dev/files/qemu-kernel-files.tar.gz and extract them into the root of the `nmk` directory. Then run `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(pwd)/lib
+If `qemu-system-i386` says it is missing some files, download the tar.gz archive of them from https://ninjamar.dev/static/files/qemu-kernel-files.tar.gz and extract them into the root of the `nmk` directory. Then run `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(pwd)/lib
 `
 ## Todo 
 - Add a makefile 
